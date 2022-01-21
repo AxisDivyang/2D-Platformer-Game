@@ -212,6 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f9e778b5794a174c9a35381263a386a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1730028603}
 --- !u!50 &1730028601
 Rigidbody2D:
   serializedVersion: 4
@@ -259,6 +260,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6860635, y: 2.1369019}
   m_EdgeRadius: 0
+--- !u!95 &1730028603 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2160473978576421356, guid: f4892c8a7044dcf4cbe14bfd3f27f850,
+    type: 3}
+  m_PrefabInstance: {fileID: 8169698991265783108}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2012845822
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,6 +442,11 @@ PrefabInstance:
     - target: {fileID: 5385455933936104473, guid: f4892c8a7044dcf4cbe14bfd3f27f850,
         type: 3}
       propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5385455933936104473, guid: f4892c8a7044dcf4cbe14bfd3f27f850,
+        type: 3}
+      propertyPath: m_LocalScale.x
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
