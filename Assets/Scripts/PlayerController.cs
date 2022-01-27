@@ -79,12 +79,11 @@ public class PlayerController : MonoBehaviour
         //    animator.SetBool("Jump", false);
         //}
 
-        if (vertical > 0)
+        if (vertical > 0 )
         {
             animator.SetBool("Jump", true);
-             
         }
-        else if (vertical < 0)
+        else
         {
             animator.SetBool("Jump", false);
              

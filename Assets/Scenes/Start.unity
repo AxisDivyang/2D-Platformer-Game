@@ -309,7 +309,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1730028600, guid: f4892c8a7044dcf4cbe14bfd3f27f850, type: 3}
       propertyPath: jump
-      value: 100
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 1730028601, guid: f4892c8a7044dcf4cbe14bfd3f27f850, type: 3}
       propertyPath: m_Constraints
@@ -317,7 +317,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1730028601, guid: f4892c8a7044dcf4cbe14bfd3f27f850, type: 3}
       propertyPath: m_Mass
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3813157665817663709, guid: f4892c8a7044dcf4cbe14bfd3f27f850,
         type: 3}
