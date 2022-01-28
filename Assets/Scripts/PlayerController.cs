@@ -7,7 +7,8 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     public float speed;
     public float jump;
-    private Rigidbody2D rb2d;     
+    private Rigidbody2D rb2d;
+    public GroundedCheck groundedCheck;
 
     // Start is called before the first frame update
     void Start()
@@ -32,9 +33,9 @@ public class PlayerController : MonoBehaviour
         transform.position = position;
 
         //Move Character Vertically
-        if(vertical > 0)
+        if(vertical > 0)  
         {
-            rb2d.AddForce(new Vector2(0f, jump), ForceMode2D.Force);
+            rb2d.AddForce(new Vector2( rb2d.velocity.x  , jump), ForceMode2D.Force);
         }
         
     }
@@ -82,6 +83,7 @@ public class PlayerController : MonoBehaviour
         if (vertical > 0 && isGrounded())
         {
             animator.SetBool("Jump", true);
+            rb2d.velocity = new Vector2(rb2d.velocity.x, jump);
         }
         else
         {
