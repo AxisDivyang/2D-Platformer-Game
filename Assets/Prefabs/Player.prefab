@@ -163,3 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 2160473978576421356}
   speed: 4
+  jump: 0
+  platformLayerMask:
+    serializedVersion: 2
+    m_Bits: 0

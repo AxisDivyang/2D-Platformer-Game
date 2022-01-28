@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     public float speed;
     public float jump;
-    private Rigidbody2D rb2d;
+    private Rigidbody2D rb2d;     
 
     // Start is called before the first frame update
     void Start()
@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour
         //    animator.SetBool("Jump", false);
         //}
 
-        if (vertical > 0 )
+        if (vertical > 0 && isGrounded())
         {
             animator.SetBool("Jump", true);
         }
@@ -88,5 +88,10 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("Jump", false);
              
         }
+    }
+
+    private bool isGrounded()
+    {
+        return transform.Find("GroundCheck").GetComponent<GroundedCheck>().isGrounded;
     }
 }
