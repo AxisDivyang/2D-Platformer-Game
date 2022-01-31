@@ -10,4 +10,10 @@ public class LoadScenesController : MonoBehaviour
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1 );
         //SceneManager.LoadSceneAsync("Level_1");
     }
+
+    public void LoadCurrentLevel()
+    {
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        //SceneManager.LoadSceneAsync("Level_1");
+    }
 }

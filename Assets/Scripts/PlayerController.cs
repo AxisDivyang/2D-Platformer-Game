@@ -96,4 +96,11 @@ public class PlayerController : MonoBehaviour
     {
         return transform.Find("GroundCheck").GetComponent<GroundedCheck>().isGrounded;
     }
+
+    public void DeathDetect()
+    {
+        animator.SetTrigger( "Death" );
+        gameObject.GetComponent<LoadScenesController>().LoadCurrentLevel();
+
+    }
 }

@@ -1728,6 +1728,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03ad65abde73daa4a9559cbaac12fe5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1499472280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499472278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03cadbb381ce69e48af351f809a922b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1524860364
 GameObject:
   m_ObjectHideFlags: 0
@@ -2417,6 +2429,7 @@ GameObject:
   - component: {fileID: 1687391948}
   - component: {fileID: 1687391947}
   - component: {fileID: 1687391949}
+  - component: {fileID: 1687391950}
   m_Layer: 0
   m_Name: DeathTileMap
   m_TagString: Untagged
@@ -2972,10 +2985,22 @@ TilemapCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+--- !u!114 &1687391950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687391945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03cadbb381ce69e48af351f809a922b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1734308836
 GameObject:
   m_ObjectHideFlags: 0
@@ -3562,6 +3587,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1730028600, guid: f4892c8a7044dcf4cbe14bfd3f27f850, type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1996751421792770317, guid: f4892c8a7044dcf4cbe14bfd3f27f850,
         type: 3}
       propertyPath: m_SortingOrder
