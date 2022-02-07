@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,11 +10,17 @@ public class PlayerController : MonoBehaviour
     public float jump;
     private Rigidbody2D rb2d;
     public GroundedCheck groundedCheck;
+    public ScoreController scoreController;
 
     // Start is called before the first frame update
     void Start()
     {
         rb2d = gameObject.GetComponent<Rigidbody2D>();
+    }
+
+    public void PickUpKey()
+    {
+        scoreController.IncreaseScore(10);
     }
 
     // Update is called once per frame
