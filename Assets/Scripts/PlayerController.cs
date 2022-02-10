@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb2d;
     public GroundedCheck groundedCheck;
     public ScoreController scoreController;
+    public int Health;
+    public Image[] hearts;
 
     // Start is called before the first frame update
     void Start()
@@ -21,13 +24,33 @@ public class PlayerController : MonoBehaviour
 
     public void KillPlayer()
     {
-        Debug.Log("Player killed by Enemy");
-        //Play the Death Animation
+        Debug.Log("Player Health Now : "+ Health);
+        if (Health < 1)
+        {
+            //Play the Death Animation
+            ReloadLevel();
+        }
+        else
+        {
+            Health -= 1;
+            //Debug.Log("Player Health Now : "+ Health);
 
-        ReloadLevel();
+           for(int i = 0; i < hearts.Length; i++)
+            {
+                if(i < Health)
+                {
+                    hearts[i].enabled = true;
+                }
+                else
+                {
+                    hearts[i].enabled = false;
+                } 
+            }
+        }
+       
     }
 
-    private void ReloadLevel()
+    public void ReloadLevel()
     {
         Debug.Log("Reloading Scene.");
         SceneManager.LoadScene(0);
